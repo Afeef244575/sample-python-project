@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git branch: 'main', url: 'https://github.com/your-username/sample-python-project.git'
+                git branch: 'main', url: 'https://github.com/Afeef244575/sample-python-project.git'
             }
         }
         stage('Install Dependencies') {
