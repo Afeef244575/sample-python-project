@@ -9,12 +9,13 @@ pipeline {
         }
         stage('Install Dependencies') {
             steps {
-                sh 'pip install -r requirements.txt'
+		sh 'python3 -m pip install --upgrade pip'
+                sh 'pip3 install -r requirements.txt'
             }
         }
         stage('Run Tests') {
             steps {
-                sh 'python -m unittest discover tests'
+                sh 'python3 -m unittest discover tests'
             }
         }
     }
